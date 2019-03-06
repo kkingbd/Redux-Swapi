@@ -11,7 +11,7 @@ export const FETCHING = 'FETCHING';
 export const ERROR = 'ERROR';
 export const SUCCESS = 'SUCCESS';
 
-export const fectchCharacters = ()=> dispatch => {
+export const starwarChars = () => dispatch => {
     dispatch({type : FETCHING})
     axios
     .get(`https://swapi.co/api/people/`)
@@ -19,7 +19,7 @@ export const fectchCharacters = ()=> dispatch => {
         console.log(" Post response", res)
         dispatch({
             type:   SUCCESS,
-            payload : res.data
+            payload : res.data.results
         })
     })
     .catch(err => 

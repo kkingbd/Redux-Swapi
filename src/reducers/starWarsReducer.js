@@ -3,7 +3,7 @@ const initialState = {
   characters: [],
   // Array characters, Boolean fetching, null error.
   fetching: false,
-  error: ''
+  error: null
 };
 export const charsReducer = (state = initialState, action) => {
   switch (action.type) {
