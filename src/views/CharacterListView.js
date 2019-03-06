@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { CharacterList } from "../components";
+import { fectchCharacters } from "../actions";
 // import actions
 
 class CharacterListView extends React.Component {
@@ -11,6 +12,7 @@ class CharacterListView extends React.Component {
 
   componentDidMount() {
     // call our action
+    this.props.dispatch(fectchCharacters())
   }
 
   render() {
